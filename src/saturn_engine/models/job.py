@@ -8,6 +8,7 @@ from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import relationship
 
+import saturn_engine.models.queue as queue_model
 from saturn_engine.core import Cursor
 from saturn_engine.core import JobId
 from saturn_engine.core.api import JobItem
@@ -16,7 +17,6 @@ from saturn_engine.utils import utcnow
 from .base import Base
 from .types import UTCDateTime
 
-import saturn_engine.models.queue as queue_model
 
 class Job(Base):
     __tablename__ = "jobs"

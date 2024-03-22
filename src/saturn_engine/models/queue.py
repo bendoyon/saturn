@@ -2,7 +2,6 @@ from typing import Optional
 
 import dataclasses
 
-from saturn_engine.core.types import JobId
 from sqlalchemy import Index
 from sqlalchemy import text
 from sqlalchemy.orm import Mapped
@@ -10,14 +9,15 @@ from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql.sqltypes import DateTime
 
+import saturn_engine.models.job as job_model
 from saturn_engine.core import Cursor
 from saturn_engine.core.api import QueueItemState
 from saturn_engine.core.api import QueueItemWithState
+from saturn_engine.core.types import JobId
 from saturn_engine.worker_manager.config.static_definitions import StaticDefinitions
 
 from .base import Base
 
-import saturn_engine.models.job as job_model
 
 class Queue(Base):
     __allow_unmapped__ = True

@@ -5,6 +5,7 @@ from sqlalchemy.types import JSON
 
 from .base import Base
 
+
 class JobCursorState(Base):
     __tablename__ = "job_cursor_states"
     job_definition_name: Mapped[str] = mapped_column(Text, primary_key=True)
