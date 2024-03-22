@@ -22,7 +22,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-SQLAlchemy = {extras = ["mypy", "asyncio"], version = ">=1.4.29"}
+SQLAlchemy = {extras = ["mypy"], version = "^2.0.28"}
 aiosqlite = "^0.17.0"
 asyncstdlib = "^3.10.2"
 aio-pika = ">=8.0"
@@ -133,7 +133,7 @@ disallow_incomplete_defs = true
 disallow_untyped_defs = true
 disallow_untyped_calls = true
 namespace_packages = true
-plugins = ["sqlalchemy.ext.mypy.plugin", "mypy_typing_asserts.mypy_plugin"]
+plugins = ["mypy_typing_asserts.mypy_plugin"]
 
 [[tool.mypy.overrides]]
 module = [
